@@ -6,20 +6,188 @@
   <title>ShopEase - Home</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
-    header { background: #333; color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
     header h1 { margin: 0; font-size: 1.8rem; }
-    nav a { color: white; margin-left: 1rem; text-decoration: none; font-weight: bold; }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
     nav a:hover { text-decoration: underline; }
-    .hero { background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd35?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; height: 400px; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);}
-    .hero h2 { font-size: 3rem; }
-    .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
-    .products { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-    .product-card { background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); width: 220px; overflow: hidden; text-align: center; }
-    .product-card img { width: 100%; height: 160px; object-fit: cover; }
-    .product-card h3 { margin: 0.5rem 0; }
-    .product-card p { color: #666; }
-    .product-card .price { color: #27ae60; font-weight: bold; margin: 0.5rem 0; }
-    footer { background: #222; color: #bbb; text-align: center; padding: 1rem 0; margin-top: 3rem; }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd35?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      padding: 0 2rem;
+      position: relative;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    .hero .cta {
+      background-color: #3498db;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .cta:hover {
+      background-color: #2980b9;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .category-section {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .category-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .category-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .category-card h3 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .products {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      width: 220px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .product-card p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .product-card .price {
+      color: #27ae60;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      background: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* For mobile view */
+    @media (max-width: 768px) {
+      .category-section {
+        flex-direction: column;
+      }
+
+      .category-card {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -35,9 +203,29 @@
 
   <section class="hero">
     <h2>Step Into Style</h2>
+    <a href="shoes.html" class="cta">Shop Now</a>
   </section>
 
   <div class="container">
+    <h2>Shop By Categories</h2>
+    <div class="category-section">
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1560264418-58e3e24eab91?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjg2OXwwfDF8c2VhY2h8Mnx8fGZpcnxlbnwwfHx8fDE2Nzg5Mjg5NTg&ixlib=rb-1.2.1&q=80&w=400" alt="Shoes" />
+        <h3>Shoes</h3>
+        <p>Explore the latest in sports and casual footwear.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1501586584382-c37d1d96a7b7?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0fHx8c2VhY2h8NHx8Y2xvdGhpbmd8ZW58MHx8fHwxNjgwMzAxMTE5&ixlib=rb-1.2.1&q=80&w=400" alt="Clothes" />
+        <h3>Clothes</h3>
+        <p>From casual wear to formal outfits, shop clothes for every occasion.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1512476610081-ff01d7ef9468?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0fHx8c2VhY2h8OHx8YWNjb3Jlc3Nvcml8ZW58MHx8fHwxNjgwMzAxMTE5&ixlib=rb-1.2.1&q=80&w=400" alt="Accessories" />
+        <h3>Accessories</h3>
+        <p>Complete your look with stylish accessories.</p>
+      </div>
+    </div>
+
     <h2>Featured Products</h2>
     <div class="products">
       <div class="product-card">
@@ -73,7 +261,23 @@
 
   <footer>
     <p>&copy; 2025 ShopEase. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
   </footer>
+
+  <script>
+    // Smooth scrolling on the page
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-
