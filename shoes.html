@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShopEase - Shoes</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #fafafa; }
+    header { background: #333; color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    header h1 { margin: 0; font-size: 1.8rem; }
+    nav a { color: white; margin-left: 1rem; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+    h2 { text-align: center; margin-bottom: 1rem; }
+    .products { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .product-card { background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); width: 220px; overflow: hidden; text-align: center; }
+    .product-card img { width: 100%; height: 160px; object-fit: cover; }
+    .product-card h3 { margin: 0.5rem 0; }
+    .product-card p { color: #555; font-size: 0.9rem; padding: 0 0.5rem; }
+    .product-card .price { color: #27ae60; font-weight: bold; margin: 0.5rem 0; }
+    .product-card a { display: inline-block; margin-bottom: 1rem; color: #3498db; text-decoration: none; font-weight: bold; }
+    .product-card a:hover { text-decoration: underline; }
+    footer { background: #222; color: #bbb; text-align: center; padding: 1rem 0; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ShopEase</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shoes.html">Shoes</a>
+      <a href="clothes.html">Clothes</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Shoes Collection</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&fit=crop&w=600&q=80" alt="Running Shoes" />
+        <h3>Running Shoes</h3>
+        <p>Lightweight and breathable running shoes for everyday jogging.</p>
+        <p class="price">$79.99</p>
+        <a href="product.html?product=running-shoes">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1528701800489-23b6b3f03d84?auto=format&fit=crop&w=600&q=80" alt="Leather Boots" />
+        <h3>Leather Boots</h3>
+        <p>Durable leather boots perfect for outdoor adventures.</p>
+        <p class="price">$120.00</p>
+        <a href="product.html?product=leather-boots">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1552346154-4d5b4db29490?auto=format&fit=crop&w=600&q=80" alt="Sneakers" />
+        <h3>Street Sneakers</h3>
+        <p>Trendy sneakers for everyday wear with superior comfort.</p>
+        <p class="price">$90.00</p>
+        <a href="product.html?product=street-sneakers">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1590080877777-2e5f1ac7b1d9?auto=format&fit=crop&w=600&q=80" alt="Hiking Shoes" />
+        <h3>Hiking Shoes</h3>
+        <p>Rugged hiking shoes with strong grip and waterproof design.</p>
+        <p class="price">$110.00</p>
+        <a href="product.html?product=hiking-shoes">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ShopEase. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
