@@ -18,8 +18,10 @@
     .product-card h3 { margin: 0.5rem 0; }
     .product-card p { color: #555; font-size: 0.9rem; padding: 0 0.5rem; }
     .product-card .price { color: #27ae60; font-weight: bold; margin: 0.5rem 0; }
-    .product-card a { display: inline-block; margin-bottom: 1rem; color: #3498db; text-decoration: none; font-weight: bold; }
+    .product-card a { display: inline-block; margin-bottom: 0.5rem; color: #3498db; text-decoration: none; font-weight: bold; }
     .product-card a:hover { text-decoration: underline; }
+    .add-cart-btn { background: #27ae60; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin-bottom: 1rem; }
+    .add-cart-btn:hover { background: #219150; }
     footer { background: #222; color: #bbb; text-align: center; padding: 1rem 0; margin-top: 3rem; }
   </style>
 </head>
@@ -43,6 +45,7 @@
         <p>Comfortable cotton t-shirt in various colors and sizes.</p>
         <p class="price">$19.99</p>
         <a href="product.html?product=casual-tshirt">View Details</a>
+        <button class="add-cart-btn" onclick="addToCart('Casual T-Shirt')">Add to Cart</button>
       </div>
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1520975698707-2fa9ebd191f2?auto=format&fit=crop&w=600&q=80" alt="Denim Jacket" />
@@ -50,6 +53,7 @@
         <p>Classic denim jacket with a modern fit and style.</p>
         <p class="price">$59.99</p>
         <a href="product.html?product=denim-jacket">View Details</a>
+        <button class="add-cart-btn" onclick="addToCart('Denim Jacket')">Add to Cart</button>
       </div>
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1520975612105-9d837b1b9c1a?auto=format&fit=crop&w=600&q=80" alt="Winter Coat" />
@@ -57,6 +61,7 @@
         <p>Warm and stylish winter coat made from premium materials.</p>
         <p class="price">$130.00</p>
         <a href="product.html?product=winter-coat">View Details</a>
+        <button class="add-cart-btn" onclick="addToCart('Winter Coat')">Add to Cart</button>
       </div>
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600&q=80" alt="Summer Dress" />
@@ -64,6 +69,7 @@
         <p>Lightweight and flowy dress perfect for summer days.</p>
         <p class="price">$45.00</p>
         <a href="product.html?product=summer-dress">View Details</a>
+        <button class="add-cart-btn" onclick="addToCart('Summer Dress')">Add to Cart</button>
       </div>
     </div>
   </div>
@@ -71,6 +77,14 @@
   <footer>
     <p>&copy; 2025 ShopEase. All rights reserved.</p>
   </footer>
+
+  <script>
+    function addToCart(productName) {
+      alert(productName + " added to cart!");
+      // In a real app, send productName to cart logic here
+    }
+  </script>
 </body>
 </html>
+
 
